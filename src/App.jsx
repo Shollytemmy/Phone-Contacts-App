@@ -10,7 +10,7 @@ function App() {
 
   return (
     <div>
-      <Container className='text-center'>
+      <Container className=''>
         <Header />
         <AddContacts />
         <ContactsList />

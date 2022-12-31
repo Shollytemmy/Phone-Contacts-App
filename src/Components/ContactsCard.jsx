@@ -2,6 +2,6 @@ import React from 'react'
 
 export const ContactsCard = () => {
   return (
-    <div>ContactsCard</div>
+    <div className='mt-5'>ContactsCard</div>
   )
 }
