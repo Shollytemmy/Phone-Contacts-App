@@ -4,6 +4,9 @@ import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
 
+// uuid 
+// import uuidv5 from 'uuidv5'
+
 export const AddContacts = ({contacts, setContacts, setContactsInfo, contactsInfo}) => {
   console.log(contacts);
 
@@ -11,7 +14,7 @@ export const AddContacts = ({contacts, setContacts, setContactsInfo, contactsInf
     e.preventDefault()
 
     if(contacts.name !== "" && contacts.email !== ""){
-      setContactsInfo([...contactsInfo, {name: contacts.name, email: contacts.email}])
+      setContactsInfo([...contactsInfo, { name: contacts.name, email: contacts.email}])
       
     } else{
       alert("Form can't be empty")

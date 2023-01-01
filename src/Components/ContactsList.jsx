@@ -22,7 +22,7 @@ const ContactsList = ({contactsInfo}) => {
 
           </div>
           <div>
-            <FaRegTrashAlt />
+            <FaRegTrashAlt style={{fontSize: "18px", color: "red", cursor: "pointer"}} />
 
           </div>
 
