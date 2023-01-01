@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Container from 'react-bootstrap/Container'
 import './App.css'
 import { AddContacts } from './Components/AddContacts'
-import { ContactsList } from './Components/ContactsList'
+import ContactsList from './Components/ContactsList'
 import { Header } from './Components/Header'
 import {ContactsCard} from './Components/ContactsCard'
 
