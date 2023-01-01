@@ -4,16 +4,26 @@ import './App.css'
 import { AddContacts } from './Components/AddContacts'
 import { ContactsList } from './Components/ContactsList'
 import { Header } from './Components/Header'
+import {ContactsCard} from './Components/ContactsCard'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [contactsInfo, setContactsInfo] = useState([])
+  const [contacts, setContacts] = useState({name: '', email: ''})
+
+  console.log(contactsInfo)
+
 
   return (
     <div>
       <Container className=''>
         <Header />
-        <AddContacts />
-        <ContactsList />
+        <AddContacts
+         contacts= {contacts}
+          setContacts= {setContacts}
+          setContactsInfo= {setContactsInfo}
+          contactsInfo= {contactsInfo}
+           />
+        <ContactsList contactsInfo={contactsInfo} />
       </Container>
     </div>
    
