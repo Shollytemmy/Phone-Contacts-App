@@ -1,7 +1,7 @@
 import React from 'react'
 import {FaRegTrashAlt} from 'react-icons/fa'
 
-export const ContactsCard = ({initName, name, email}) => {
+export const ContactsCard = ({initName, name, email, handleDelete, id}) => {
   return (
 <div className='d-flex border col-6 mt-5 justify-content-between'>
           <div>
@@ -15,7 +15,10 @@ export const ContactsCard = ({initName, name, email}) => {
 
           </div>
           <div>
-            <FaRegTrashAlt style={{fontSize: "18px", color: "red", cursor: "pointer"}} />
+            <FaRegTrashAlt 
+            onClick={() => handleDelete(id)}
+            
+             style={{fontSize: "18px", color: "red", cursor: "pointer", marginLeft: "5px"}}  />
 
           </div>
 

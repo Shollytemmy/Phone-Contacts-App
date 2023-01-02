@@ -3,7 +3,7 @@ import { ContactsCard } from './ContactsCard'
 
 
 
-const ContactsList = ({contactsInfo}) => {
+const ContactsList = ({contactsInfo, handleDelete}) => {
 
   
   return (
@@ -11,7 +11,14 @@ const ContactsList = ({contactsInfo}) => {
       {contactsInfo.map((contact) => {
         let initName = contact.name[0]
        return(
-        <ContactsCard key={contact.id} name={contact.name} initName ={initName} email={contact.email} />
+        <ContactsCard
+         key={contact.id}
+         id={contact.id}
+          name={contact.name}
+           initName ={initName} 
+           email={contact.email} 
+           handleDelete={handleDelete}
+            />
 
 
        ) 

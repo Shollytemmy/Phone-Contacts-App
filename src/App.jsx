@@ -15,6 +15,9 @@ function App() {
 
   const handleDelete = (id) => {
 
+    let removeIds = contactsInfo.filter((contact) => contact.id !== id)
+    setContactsInfo(removeIds);
+
   }
     useEffect(() =>{
    let results = JSON.parse(localStorage.getItem("contacts"))
@@ -40,7 +43,10 @@ function App() {
           setContactsInfo= {setContactsInfo}
           contactsInfo= {contactsInfo}
            />
-        <ContactsList contactsInfo={contactsInfo} />
+        <ContactsList
+         contactsInfo={contactsInfo}
+         handleDelete={handleDelete}
+          />
       </Container>
     </div>
    
