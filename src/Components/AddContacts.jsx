@@ -9,7 +9,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 export const AddContacts = ({contacts, setContacts, setContactsInfo, contactsInfo}) => {
-  console.log(contacts);
+  
 
   const handleSubmit = (e) => {
     e.preventDefault()
