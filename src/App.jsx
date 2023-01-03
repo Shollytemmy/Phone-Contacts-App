@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
+import {Routes, Route} from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
+// Router Config
+
 import './App.css'
 import { AddContacts } from './Components/AddContacts'
 import ContactsList from './Components/ContactsList'
@@ -37,16 +40,33 @@ function App() {
     
       <Container className=''>
         <Header />
-        <AddContacts
+        <Routes>
+          <Route path="/" element={<AddContacts
+                      contacts= {contacts}
+                      setContacts= {setContacts}
+                      setContactsInfo= {setContactsInfo}
+                      contactsInfo= {contactsInfo}
+           />}
+            />
+
+            <Route path="/phonelist" element={<ContactsList
+                contactsInfo={contactsInfo}
+                handleDelete={handleDelete}
+          />
+
+            } />
+
+        </Routes>
+        {/* <AddContacts
          contacts= {contacts}
           setContacts= {setContacts}
           setContactsInfo= {setContactsInfo}
           contactsInfo= {contactsInfo}
-           />
-        <ContactsList
+           /> */}
+        {/* <ContactsList
          contactsInfo={contactsInfo}
          handleDelete={handleDelete}
-          />
+          /> */}
       </Container>
     
    

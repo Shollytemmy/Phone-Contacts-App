@@ -24,6 +24,7 @@ export const AddContacts = ({contacts, setContacts, setContactsInfo, contactsInf
     }
 
     setContacts({...contacts, name: "", email: ""})
+    
   
 
     
