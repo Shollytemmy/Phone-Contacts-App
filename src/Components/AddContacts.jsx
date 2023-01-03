@@ -3,6 +3,7 @@ import React, {useState} from 'react'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Button from 'react-bootstrap/Button'
+import {FaRegAddressBook} from 'react-icons/fa'
 
 // uuid 
 import { v4 as uuidv4 } from 'uuid';
@@ -60,7 +61,9 @@ export const AddContacts = ({contacts, setContacts, setContactsInfo, contactsInf
                 />
         </Form.Group>
         </Col>
-        <Button type='submit'>Add Contact</Button>
+        <Button type='submit'>
+          <FaRegAddressBook />
+        </Button>
 
             
 

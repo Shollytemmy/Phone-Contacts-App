@@ -34,7 +34,7 @@ function App() {
 
 
   return (
-    <div>
+    
       <Container className=''>
         <Header />
         <AddContacts
@@ -48,7 +48,7 @@ function App() {
          handleDelete={handleDelete}
           />
       </Container>
-    </div>
+    
    
   )
 }
