@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
@@ -10,6 +11,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 export const AddContacts = ({contacts, setContacts, setContactsInfo, contactsInfo}) => {
+
+  const navigate = useNavigate()
   
 
   const handleSubmit = (e) => {
@@ -24,17 +27,16 @@ export const AddContacts = ({contacts, setContacts, setContactsInfo, contactsInf
     }
 
     setContacts({...contacts, name: "", email: ""})
-    
-  
 
-    
-    
+    navigate("phonelist");
 
-  }
+    }
+
+   
   
   return (
     <div>
-        <h2>Add Contacts</h2>
+        <h2>Add New Contact</h2>
 
         <Form onSubmit={handleSubmit}>
             <Col className='mb-5'>

@@ -1,8 +1,12 @@
 import React from 'react'
+import Button from 'react-bootstrap/esm/Button'
 import {FaRegTrashAlt} from 'react-icons/fa'
 
 export const ContactsCard = ({initName, name, email, handleDelete, id}) => {
   return (
+    
+      
+    
 <div className='d-flex border col-8 mt-5 justify-content-between'>
           <div>
             <div className='d-flex justify-center align-items-center mt-2' style={{height: "30px"}}>
@@ -24,5 +28,6 @@ export const ContactsCard = ({initName, name, email, handleDelete, id}) => {
 
           
         </div>
+   
   )
 }
