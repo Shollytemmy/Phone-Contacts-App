@@ -7,6 +7,7 @@ import './App.css'
 import { AddContacts } from './Components/AddContacts'
 import ContactsList from './Components/ContactsList'
 import { Header } from './Components/Header'
+import { NotFound } from './Components/NotFound'
 
 
 
@@ -55,6 +56,8 @@ function App() {
           />
 
             } />
+
+            <Route path="*" element={<NotFound />} />
 
         </Routes>
         {/* <AddContacts
