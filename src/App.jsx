@@ -8,6 +8,7 @@ import { AddContacts } from './Components/AddContacts'
 import ContactsList from './Components/ContactsList'
 import { Header } from './Components/Header'
 import { NotFound } from './Components/NotFound'
+import { ViewContact } from './Components/ViewContact'
 
 
 
@@ -56,6 +57,7 @@ function App() {
           />
 
             } />
+            <Route path='viewcontact' element={<ViewContact />} />
 
             <Route path="*" element={<NotFound />} />
 
