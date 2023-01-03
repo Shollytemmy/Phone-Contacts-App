@@ -8,7 +8,7 @@ import { AddContacts } from './Components/AddContacts'
 import ContactsList from './Components/ContactsList'
 import { Header } from './Components/Header'
 import { NotFound } from './Components/NotFound'
-import { ViewContact } from './Components/ViewContact'
+import  ViewContact  from './Components/ViewContact'
 
 
 
@@ -16,7 +16,7 @@ function App() {
   const [contactsInfo, setContactsInfo] = useState([])
   const [contacts, setContacts] = useState({name: '', email: ''})
 
-  console.log(contactsInfo)
+
 
   const handleDelete = (id) => {
 
@@ -57,21 +57,12 @@ function App() {
           />
 
             } />
-            <Route path='viewcontact' element={<ViewContact />} />
+            <Route path='viewcontact/:id' element={<ViewContact />} />
 
             <Route path="*" element={<NotFound />} />
 
         </Routes>
-        {/* <AddContacts
-         contacts= {contacts}
-          setContacts= {setContacts}
-          setContactsInfo= {setContactsInfo}
-          contactsInfo= {contactsInfo}
-           /> */}
-        {/* <ContactsList
-         contactsInfo={contactsInfo}
-         handleDelete={handleDelete}
-          /> */}
+        
       </Container>
     
    

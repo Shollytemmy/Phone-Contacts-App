@@ -14,17 +14,14 @@ const ContactsList = ({contactsInfo, handleDelete}) => {
   const contactslist = contactsInfo.map((contact) => {
         let initName = contact.name[0]
        return(
-        <div className='d-flex justify-content-center align-items-center flex-column'>
-
-       
-        
-        <ContactsCard
-         key={contact.id}
-         id={contact.id}
-          name={contact.name}
-           initName ={initName} 
-           email={contact.email} 
-           handleDelete={handleDelete}
+        <div className='d-flex justify-content-center align-items-center flex-column' key={contact.id}>
+          <ContactsCard
+            id={contact.id}
+              name={contact.name}
+              initName ={initName} 
+              email={contact.email} 
+              handleDelete={handleDelete}
+              contact={contact}
             />
              </div>
            
@@ -44,16 +41,9 @@ const ContactsList = ({contactsInfo, handleDelete}) => {
         <HiOutlineUserAdd />
          </Button>
       </div>
-      
-      
+
       {contactslist}
-
-      
-
-        
-        
-        
-    </div>
+</div>
   )
 }
 

@@ -1,14 +1,24 @@
 import React from 'react'
 import Button from 'react-bootstrap/esm/Button'
 import {FaRegTrashAlt} from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
-export const ContactsCard = ({initName, name, email, handleDelete, id}) => {
+export const ContactsCard = (
+  {
+    initName,
+     name,
+      email,
+       handleDelete,
+        id,
+        contact
+  }) => {
   return (
     
-      
+      //pathname: `/viewcontact/${id}` state = {val: contact}
     
 <div className='d-flex border col-8 mt-5 justify-content-between'>
-          <div>
+          <Link to={`/viewcontact/${id}`} state = {{val: contact}}  style={{textDecoration: "none"}}>
+            
             <div className='d-flex justify-center align-items-center mt-2' style={{height: "30px"}}>
               <p className='mx-3 rounded-circle text-center mt-3' style={{backgroundColor: "red", width: "30px", height: "30px", color: "#fff"}}>{initName}</p>
 
@@ -17,7 +27,7 @@ export const ContactsCard = ({initName, name, email, handleDelete, id}) => {
           <p className='ms-5 fw-normal' style={{fontSize: "13px"}}>{email}</p>
           
 
-          </div>
+          </Link>
           <div>
             <FaRegTrashAlt 
             onClick={() => handleDelete(id)}
@@ -28,6 +38,6 @@ export const ContactsCard = ({initName, name, email, handleDelete, id}) => {
 
           
         </div>
-   
+        
   )
 }

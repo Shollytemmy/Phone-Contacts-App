@@ -1,7 +1,14 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 
-export const ViewContact = () => {
+ const ViewContact = () => {
+  const location = useLocation()
+  
+  let cont = location.state
+  console.log(location)
   return (
-    <div>ViewContact</div>
+    <div>ViewContact:{"location"} </div>
   )
 }
+
+export default ViewContact
