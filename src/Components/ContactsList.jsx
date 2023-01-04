@@ -50,4 +50,4 @@ const ContactsList = ({contactsInfo, handleDelete}) => {
 export default ContactsList
 
 
-//d-flex justify-content-center align-items-center flex-column
+
