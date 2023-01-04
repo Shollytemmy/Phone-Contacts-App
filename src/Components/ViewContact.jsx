@@ -7,8 +7,8 @@ import Button from 'react-bootstrap/Button'
   const location = useLocation()
   const navigate = useNavigate()
   
-  let cont = location.state
-  console.log(location.state)
+  let user = location.state
+  
   return (
     <div className='d-flex justify-content-center'>
 
@@ -17,15 +17,15 @@ import Button from 'react-bootstrap/Button'
       <Card.Body>
         <Card.Title>View Contact</Card.Title>
         <Card.Text style={{width: "5rem", height: "5rem", borderRadius:"50%", backgroundColor: "red", display: "flex", justifyContent: "center", alignItems: "center", fontSize: "28px", color: "#fff"}}>
-          <span>{cont.initName}</span>
+          <span>{user.initName}</span>
           </Card.Text>
-          <Card.Text style={{fontSize: "18px"}}>{cont.data.name}</Card.Text>
-          <Card.Text style={{fontSize: "13px"}}>{cont.data.email}</Card.Text>
+          <Card.Text style={{fontSize: "18px"}}>{user.data.name}</Card.Text>
+          <Card.Text style={{fontSize: "13px"}}>{user.data.email}</Card.Text>
         <Card.Text>
           Some quick example text to build on the card title and make up the
           bulk of the card's content.
         </Card.Text>
-        <Button variant="primary" onClick={() => navigate(-1)}>Go somewhere</Button>
+        <Button variant="primary" onClick={() => navigate(-1)}>Go back</Button>
       </Card.Body>
     </Card>
 
