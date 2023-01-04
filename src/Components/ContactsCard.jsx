@@ -17,7 +17,7 @@ export const ContactsCard = (
       //pathname: `/viewcontact/${id}` state = {val: contact}
     
 <div className='d-flex border col-8 mt-5 justify-content-between'>
-          <Link to={`/viewcontact/${id}`} state = {{val: contact}}  style={{textDecoration: "none"}}>
+          <Link to={`/viewcontact/${id}`} state = {{data: contact, initName: initName}}  style={{textDecoration: "none"}}>
             
             <div className='d-flex justify-center align-items-center mt-2' style={{height: "30px"}}>
               <p className='mx-3 rounded-circle text-center mt-3' style={{backgroundColor: "red", width: "30px", height: "30px", color: "#fff"}}>{initName}</p>
