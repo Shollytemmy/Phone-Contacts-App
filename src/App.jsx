@@ -47,7 +47,7 @@ function App() {
   }, [])
 
   useEffect(() =>{
-    localStorage.setItem("contacts", JSON.stringify(contactsInfo))
+    // localStorage.setItem("contacts", JSON.stringify(contactsInfo))
 
   }, [contactsInfo])
 

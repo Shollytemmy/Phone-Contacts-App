@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { useNavigate } from 'react-router-dom'
+import axios from '../api/contacts'
 
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
@@ -15,11 +16,21 @@ export const AddContacts = ({contacts, setContacts, setContactsInfo, contactsInf
   const navigate = useNavigate()
   
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
+    // const request = {
+    //   id: uuidv4(),
+    //   ...contacts
+    // }
+
+    let response = await axios.post("/contacts/", {
+      id: uuidv4(),
+      ...contacts
+    })
+
     if(contacts.name !== "" && contacts.email !== ""){
-      setContactsInfo([...contactsInfo, { id: uuidv4(), name: contacts.name, email: contacts.email}])
+      setContactsInfo([...contactsInfo, response.data])
       
     } else{
       alert("Form can't be empty")
