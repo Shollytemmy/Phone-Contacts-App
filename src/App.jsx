@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
+
+import axios from './api/contacts'
 // Router Config
 
 import './App.css'
@@ -18,6 +20,13 @@ function App() {
 
 
 
+  const dataPersist = async() =>{
+
+    const response = await axios.get("/contacts")
+    return response.data
+
+  }
+
   const handleDelete = (id) => {
 
     let removeIds = contactsInfo.filter((contact) => contact.id !== id)
@@ -25,9 +34,15 @@ function App() {
 
   }
     useEffect(() =>{
-   let results = JSON.parse(localStorage.getItem("contacts"))
+  //  let results = JSON.parse(localStorage.getItem("contacts"))
 
-   if(results) setContactsInfo(results)
+  //  if(results) setContactsInfo(results)
+
+  const fetchAllContacts = async() =>{
+    let allContacts = await dataPersist()
+    if(allContacts) setContactsInfo(allContacts)
+  }
+  fetchAllContacts()
 
   }, [])
 
