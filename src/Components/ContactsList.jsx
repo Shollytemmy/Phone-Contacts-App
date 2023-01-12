@@ -8,7 +8,7 @@ import {HiOutlineUserAdd} from 'react-icons/hi'
 
 
 
-const ContactsList = ({contactsInfo, handleDelete}) => {
+const ContactsList = ({contactsInfo, handleDelete, updateContact}) => {
   const navigate = useNavigate()
 
   const contactslist = contactsInfo.map((contact) => {
@@ -22,6 +22,7 @@ const ContactsList = ({contactsInfo, handleDelete}) => {
               email={contact.email} 
               handleDelete={handleDelete}
               contact={contact}
+              
             />
              </div>
            

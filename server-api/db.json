@@ -1,39 +1,49 @@
 {
   "contacts": [
     {
-      "id": "e06878e4-548a-4ecb-af92-79b8ec3aa18d",
-      "name": "Bunameen ",
+      "id": "4d53f4a6-8251-4fcc-bac0-d8ee3c9a715a",
+      "name": "Bunameen Nurudeen S",
+      "email": "bunyameen@gmail.com"
+    },
+    {
+      "id": "3d4605db-4000-4333-9145-d345a996d1ec",
+      "name": "Kaii",
+      "email": "Kai@gmail.com"
+    },
+    {
+      "id": "8ac53214-54a8-43f5-9088-0459b9042ac0",
+      "name": "Qussos Adaramaja",
       "email": "qussos@yahoo.com"
     },
     {
-      "id": "e06878e4-548a-4ecb-af92-79b8ec3aa18e",
-      "name": "Bunameen Nurudeen ",
-      "email": "qussos@yahoo.com"
+      "id": "23191bc4-c472-4a6a-9b78-e2d2521626b2",
+      "name": "Akin Agba",
+      "email": "abga235@gmail.com"
     },
     {
-      "id": "b7a4cccd-6a6c-4c92-9b46-ee1307663f14",
-      "name": "Peter Pan",
-      "email": "pan345@gmail.com"
+      "id": "c3928140-c927-4ac2-a8db-63cf3997e0cf",
+      "name": "Oluwa Shola",
+      "email": "shola@gmai.com"
     },
     {
-      "id": "533f3cbd-65df-4bba-ba0c-7755ce77dfb7",
-      "name": "",
-      "email": "unknow@gmail.com"
+      "id": "5f653f45-c745-4606-a4a9-0a89ca372dce",
+      "name": "Daada Oyin",
+      "email": "oyindada@yahoo.com"
     },
     {
-      "id": "321f27d4-dae9-403c-b1db-18b81642cd00",
-      "name": "you garrit",
-      "email": "unknow@gmail.com"
+      "id": "63a477e6-cd65-47c0-a3ee-5f4ef51c3bc8",
+      "name": "Adenuel Adetunji",
+      "email": "adenuel@gmail.com"
     },
     {
-      "id": "6fe002f0-8966-4664-9f40-b8234f198da1",
-      "name": "Allah is One ",
-      "email": "allahuwaheed@gmail.com"
+      "id": "de398d1c-7482-4405-958e-1882f61f8134",
+      "name": "Rahmah Jimoh",
+      "email": "rahmah56@gmail.com"
     },
     {
-      "id": "1d115820-55b4-4185-8468-5fc136bb1171",
-      "name": "Uknown Love",
-      "email": "love@gmail.com"
+      "id": "32ee0e59-5dfb-40d8-8505-dc90e09884cf",
+      "name": "Imam Hawau",
+      "email": "imamtemitopehawau@gmail.com"
     }
   ]
 }

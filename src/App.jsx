@@ -11,6 +11,7 @@ import ContactsList from './Components/ContactsList'
 import { Header } from './Components/Header'
 import { NotFound } from './Components/NotFound'
 import  ViewContact  from './Components/ViewContact'
+import { EditConact } from './Components/EditContact'
 
 
 
@@ -27,16 +28,16 @@ function App() {
 
   }
 
-  const handleDelete = (id) => {
+  const handleDelete = async (id) => {
+
+    await axios.delete(`/contacts/${id}`)
 
     let removeIds = contactsInfo.filter((contact) => contact.id !== id)
     setContactsInfo(removeIds);
 
   }
     useEffect(() =>{
-  //  let results = JSON.parse(localStorage.getItem("contacts"))
 
-  //  if(results) setContactsInfo(results)
 
   const fetchAllContacts = async() =>{
     let allContacts = await dataPersist()
@@ -46,16 +47,25 @@ function App() {
 
   }, [])
 
-  useEffect(() =>{
-    // localStorage.setItem("contacts", JSON.stringify(contactsInfo))
+  const updateContact = async(contact) => {
+    const response = await axios.put(`/contacts/${contact.id}`, contact)
+    console.log(response.data)
+    const {id,name,email} = response.data
+     setContactsInfo(contactsInfo.map((contact) => {
+      return contact.id === id ? {...response.data} : contact
+     
 
-  }, [contactsInfo])
+    }))
+  }
+
+  
+  
 
 
 
   return (
     
-      <Container className=''>
+      <div className=''>
         <Header />
         <Routes>
           <Route path="/" element={<AddContacts
@@ -65,10 +75,19 @@ function App() {
                       contactsInfo= {contactsInfo}
            />}
             />
+            <Route path='/edit' element={<EditConact
+                contacts= {contacts}
+                      setContacts= {setContacts}
+                      setContactsInfo= {setContactsInfo}
+                      contactsInfo= {contactsInfo}
+                      updateContact={updateContact}
+                       
+             />}/>
 
             <Route path="/phonelist" element={<ContactsList
                 contactsInfo={contactsInfo}
                 handleDelete={handleDelete}
+                
           />
 
             } />
@@ -78,10 +97,12 @@ function App() {
 
         </Routes>
         
-      </Container>
+      </div>
     
    
   )
 }
+
+
 
 export default App
