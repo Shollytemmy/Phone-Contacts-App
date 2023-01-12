@@ -12,7 +12,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 export const EditConact = ({
-      contacts
+      contacts,
+         updateContact
         }) => {
 
   const navigate = useNavigate()
