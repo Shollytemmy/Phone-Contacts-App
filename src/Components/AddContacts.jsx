@@ -75,7 +75,7 @@ export const AddContacts = ({contacts, setContacts, setContactsInfo, contactsInf
                 />
         </Form.Group>
         </Col>
-        <Button type='submit'>
+        <Button type='submit' style={{marginLeft: "10px"}}>
           <FaRegAddressBook />
         </Button>
 

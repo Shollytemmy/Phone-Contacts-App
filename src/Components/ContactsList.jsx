@@ -36,9 +36,9 @@ const ContactsList = ({contactsInfo, handleDelete, updateContact}) => {
   
   return (
     <div className=''>
-      <div className='d-flex justify-content-between border'>
+      <div className='d-flex justify-content-between border p-2'>
         <h2>Contacts</h2>
-      <Button onClick={() => navigate(-1)}>
+      <Button onClick={() => navigate(-1)} style={{marginRight: "20px", }}>
         <HiOutlineUserAdd />
          </Button>
       </div>
